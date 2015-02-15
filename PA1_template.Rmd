@@ -152,7 +152,7 @@ weekday_dat<-aggregate(steps~interval, data=data, subset=daytype=="weekday", FUN
 weekend_dat<-aggregate(steps~interval, data=data, subset=daytype=="weekend", FUN=mean)
 weekday_dat$daytype <- "weekday"
 weekend_dat$daytype <- "weekend"
-qplot(interval, steps, data=rbind(weekend_dat, weekday_dat), geom="line", facets=daytype~., main="Average Number of Steps per 5 min interval", ylab="Average number of steps", xlab="Time")
+qplot(interval, steps, data=rbind(weekend_dat, weekday_dat), geom="line", facets=daytype~., main="Average Number of Steps per 5 min interval", ylab="Average number of steps", xlab="Time (in min)")
 
 ```
 
